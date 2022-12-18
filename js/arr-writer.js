@@ -1,6 +1,15 @@
 export function arr_writer(product) {
   const box = document.querySelector('.box')
   const all_money_span = document.querySelector('.all_money-span')
+  let for_admin = localStorage.getItem('admin')
+  function for_admin_func(id){
+    if (for_admin == 'true') {
+      return `<button id="${id}" class="delete_button" type="button">Delete product</button>`
+    }
+    else{
+      return ''
+    }
+  }
   function render() {
     box.textContent = ''
     for (const i of product) {
@@ -27,11 +36,13 @@ export function arr_writer(product) {
           <p id="${i.id}" class="count">0</p>
           <button id="${i.id}" style="border:none; padding:10px; border-radius:2px; background-color: aqua; margin-bottom:5px; margin-left:4px; " class="btn-plus" type="button">+</button>
           </div>
+         ${for_admin_func(i.id)}
           
         </div>
       </div>
     </li>
   `
+  
 
 
     }
@@ -44,6 +55,22 @@ export function arr_writer(product) {
   const btn_box = document.querySelectorAll('.btn_box')
   const text_count = document.querySelectorAll('.text-muted')
   const all_money = document.querySelectorAll('.all_money')
+
+  let delete_button = document.querySelectorAll('.delete_button')
+
+  for (const i of card) {
+    i.addEventListener('click', (e)=> {
+      if(e.target.className == 'delete_button'){
+        for (let j = 0; j < product.length; j++) {
+          if (product[j].id == i.id) {
+            product.splice(j,1);
+            arr_writer(product);
+          }
+        }
+      }
+    })
+  }
+
   for (const k of card) {
     k.addEventListener('click', (e) => {
       let alll = 1;

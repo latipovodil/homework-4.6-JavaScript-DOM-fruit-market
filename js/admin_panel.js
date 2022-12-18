@@ -1,4 +1,6 @@
 export function admin_panel(product, arr_writer) {
+  
+
 
   if (localStorage.length > 1) {
     for (let i = 2; i < localStorage.length + 1; i++) {
@@ -14,11 +16,11 @@ export function admin_panel(product, arr_writer) {
   let button_password = document.querySelector('.button_password')
 
   button_password.addEventListener('click', (e) => {
-    if (button_password.style.backgroundImage == "" || button_password.style.backgroundImage=='url("../img/eye1.svg")') {
+    if (button_password.style.backgroundImage == "" || button_password.style.backgroundImage == 'url("../img/eye1.svg")') {
       button_password.style.backgroundImage = "url('../img/eye2.svg')"
       input2.type = 'text'
     }
-    else{
+    else {
       button_password.style.backgroundImage = "url('../img/eye1.svg')"
       input2.type = 'password'
     }
@@ -125,7 +127,8 @@ export function admin_panel(product, arr_writer) {
       if (input2.value * 1 == 3333) {
         form.style.display = 'none'
         localStorage.setItem('admin', true)
-        admin_add_product_func()
+        admin_add_product_func();
+        arr_writer(product)
       }
       else {
         input2.classList.add('password_error')

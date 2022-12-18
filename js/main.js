@@ -6,11 +6,11 @@ import { like } from "./like.js";
 import { search } from "./search.js";
 import { slide } from "./slide.js";
 import { admin_panel } from "./admin_panel.js";
-admin_panel(product,arr_writer)
+admin_panel(product, arr_writer)
 arr_writer(product);
 buy(arr_writer);
-nav_menu(like,product,arr_writer);
-like(product,false);
+nav_menu(like, product, arr_writer);
+like(product, false);
 search(product)
 slide()
 
