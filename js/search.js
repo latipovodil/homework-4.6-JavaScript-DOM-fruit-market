@@ -83,53 +83,57 @@ export function search(product) {
       const btn_box = document.querySelectorAll('.btn_box')
       const text_count = document.querySelectorAll('.text-muted')
       const all_money = document.querySelectorAll('.all_money')
-      const card5 = document.querySelector('.card5')
-      card5.addEventListener('click', () => {
-        let box = document.querySelector('.box')
-        let notification_label = document.querySelector('.notification_label');
-        let search_label = document.querySelector('.search_label');
-        let home_label = document.querySelector('.home_label');
-        let buy_all = document.querySelector('.buy_all');
-        let favorites_label = document.querySelector('.favorites_label');
-        let favorites_box = document.querySelector('.favorites_box');
-        let search_box = document.querySelector('.search_box');
-        let profile_label = document.querySelector('.profile_label');
-        let selector = document.querySelector('.selector');
-        let searche_input = document.querySelector('.searche_input')
-        let searche_button = document.querySelector('.search_button')
-        let search = document.querySelector('.search')
-        let card5 = document.querySelector('.card5')
-        let search_box2 = document.querySelector('.search_box')
-        search_box2.style.display = 'block'
-        favorites_box.style.display = 'none'
-        box.style.display = 'flex'
-        like.style.display = 'none'
-        searche_input.style.display = 'none'
-        searche_button.style.display = 'none'
-
-        
-        window.scroll({
-          top: 4500,
-          behavior: 'smooth',
-          borderRadius:5,
-        });
+      const card5 = document.querySelectorAll('.card5')
+      for (const i of card5) {
+        i.addEventListener('click', () => {
+          let box = document.querySelector('.box')
+          let notification_label = document.querySelector('.notification_label');
+          let search_label = document.querySelector('.search_label');
+          let home_label = document.querySelector('.home_label');
+          let buy_all = document.querySelector('.buy_all');
+          let favorites_label = document.querySelector('.favorites_label');
+          let favorites_box = document.querySelector('.favorites_box');
+          let search_box = document.querySelector('.search_box');
+          let profile_label = document.querySelector('.profile_label');
+          let selector = document.querySelector('.selector');
+          let searche_input = document.querySelector('.searche_input');
+          let searche_button = document.querySelector('.search_button');
+          let search = document.querySelector('.search');
+          let card5 = document.querySelector('.card5');
+          let search_box2 = document.querySelector('.search_box');
+          search_box2.textContent = '';
+          search_box2.style.display = 'block';
+          favorites_box.style.display = 'none';
+          box.style.display = 'flex';
+          like.style.display = 'none';
+          searche_input.style.display = 'none';
+          searche_button.style.display = 'none';
 
 
-        search_box2.style.display = 'none'
-        box.style.display = 'flex'
-
-        selector.classList = 'selector checked_color selector_after home_label_selector';
-        home_label.classList.add('top30', 'checked_color')
-        search_label.classList.remove('top30')
-        notification_label.classList.remove('top30')
-        favorites_label.classList.remove('top30')
-        profile_label.classList.remove('top30')
-        buy_all.classList.remove('top30')
+          window.scroll({
+            top: 4500,
+            behavior: 'smooth',
+            borderRadius: 5,
+          });
 
 
+          search_box2.style.display = 'none'
+          box.style.display = 'flex'
+
+          selector.classList = 'selector checked_color selector_after home_label_selector';
+          home_label.classList.add('top30', 'checked_color')
+          search_label.classList.remove('top30')
+          notification_label.classList.remove('top30')
+          favorites_label.classList.remove('top30')
+          profile_label.classList.remove('top30')
+          buy_all.classList.remove('top30')
 
 
-      })
+
+
+        })
+      }
+
 
 
       for (const k of card) {
