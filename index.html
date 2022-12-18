@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="./img/icon-js.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Market</title>
+</head>
+
+<body>
+  <header>
+    <div class="container header_container">
+      <div class="money_product">
+        <p class="all_money-box"><span class="all_money-span">0</span>$</p>
+        <button type="button" class="buy_all"><span>Buy</span></button>
+        <button type="button" class="buy_all like_all"><span>Like</span></button>
+      </div>
+
+      <a style="width: 200px;height: 120px;" href="./index.html"><img style="width: 200px;height: 140px;"
+          src="./img/logo.jpg" alt="logojon"></a>
+      <nav class="menu">
+
+
+        <input class="notification" type="radio" name="nav-item" id="m-notification"><label class="notification_label"
+          for="m-notification">Buy</label>
+        <input class="search" type="radio" name="nav-item" id="m-search"><label class="search_label"
+          for="m-search">Search</label>
+        <input class="home" type="radio" name="nav-item" id="m-home" checked><label class="home_label"
+          for="m-home">Home</label>
+        <input class="favorites" type="radio" name="nav-item" id="m-favorites"><label class="favorites_label"
+          for="m-favorites">Like</label>
+        <input class="profile" type="radio" name="nav-item" id="m-profile"><label class="profile_label"
+          for="m-profile">Admin Panel</label>
+        <div class="selector"></div>
+      </nav>
+    </div>
+
+  </header>
+  <main>
+    <section>
+      <input placeholder="Search fruit" type="text" name="search" class="searche_input">
+      <button class="search_button" type="button">Search</button>
+    </section>
+    <section class="corusel">
+      <div class="container">
+        <div class="slide">
+          <div>
+            <img src="./img/slide-avokado.jpg" alt="avakado">
+          </div>
+          <div>
+            <img src="./img/slide-banana.jpg" alt="banana">
+          </div>
+          <div>
+            <img src="./img/slide-cherry.jpg" alt="cherry">
+          </div>
+          <div>
+            <img src="./img/slide-promagrand.jpg" alt="promagrand">
+          </div>
+          <div>
+            <img src="./img/slider-limon.jpg" alt="limon">
+          </div>
+          <div>
+            <img src="./img/slider-malina.jpg" alt="malina">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container container_boxes">
+        <ul class="box">
+        </ul>
+        <ul style="display: none; align-items: center;justify-content: center;" class="favorites_box"></ul>
+        <ul class="like"></ul>
+        <div class="search search_box"></div>
+      </div>
+    </section>
+
+    <section style="display: none;" class="logup">
+      <div class="container">
+        <form class="form" method="post">
+
+          <input class="sign_up sign_up1" style="display: inline-block;" required placeholder="Name" type="text" id="name"
+            name="name">
+          <input class="sign_up sign_up2" style="display: inline-block;" required placeholder="Password (3333)" type="password"
+            id="password" name="password">
+
+          <button class="sign_up-btn" type="submit">Log Up</button>
+        </form>
+        <div class="admin_add_product">
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <script src="./js/jquer.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
