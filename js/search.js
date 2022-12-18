@@ -127,10 +127,6 @@ export function search(product) {
           favorites_label.classList.remove('top30')
           profile_label.classList.remove('top30')
           buy_all.classList.remove('top30')
-
-
-
-
         })
       }
 

@@ -977,4 +977,22 @@ form {
   100% {
     margin-right: 0;
   }
+}
+.button_password {
+  background-repeat: no-repeat;
+  background-image: url("../img/eye1.svg");
+  background-position: center;
+  z-index: 5;
+  width: 50px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 42%;
+  right: 38%;
+}
+
+.button_password:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }/*# sourceMappingURL=main.css.map */

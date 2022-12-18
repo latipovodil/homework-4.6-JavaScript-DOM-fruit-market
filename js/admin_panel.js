@@ -11,6 +11,20 @@ export function admin_panel(product, arr_writer) {
   let input1 = document.querySelector('.sign_up1')
   let input2 = document.querySelector('.sign_up2')
   let admin_add_product = document.querySelector('.admin_add_product')
+  let button_password = document.querySelector('.button_password')
+
+  button_password.addEventListener('click', (e) => {
+    if (button_password.style.backgroundImage == "" || button_password.style.backgroundImage=='url("../img/eye1.svg")') {
+      button_password.style.backgroundImage = "url('../img/eye2.svg')"
+      input2.type = 'text'
+    }
+    else{
+      button_password.style.backgroundImage = "url('../img/eye1.svg')"
+      input2.type = 'password'
+    }
+
+  })
+
 
   if (!(localStorage.getItem('admin'))) {
     localStorage.setItem('admin', false)
